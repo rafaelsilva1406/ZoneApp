@@ -1,0 +1,24 @@
+.main-content [class*='col-']:not(:last-child):after {
+  background: #e0e0e0;
+  width: 1px;
+  content: "";
+  display:block;
+  position: absolute;
+  top:0;
+  bottom: 0;
+  right: 0;
+  min-height: 70px;
+}
+.gradientFade{
+	background: rgb(0, 0, 0); 
+	background: rgba(0,0,0,1);
+	background: -moz-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(181,198,208,0.66) 49%, rgba(216,225,231,0.65) 50%, rgba(242,246,248,0.3) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,0,0,1)), color-stop(49%, rgba(181,198,208,0.66)), color-stop(50%, rgba(216,225,231,0.65)), color-stop(100%, rgba(242,246,248,0.3)));
+	background: -webkit-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(181,198,208,0.66) 49%, rgba(216,225,231,0.65) 50%, rgba(242,246,248,0.3) 100%);
+	background: -o-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(181,198,208,0.66) 49%, rgba(216,225,231,0.65) 50%, rgba(242,246,248,0.3) 100%);
+	background: -ms-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(181,198,208,0.66) 49%, rgba(216,225,231,0.65) 50%, rgba(242,246,248,0.3) 100%);
+}
+li.index-item:hover{
+	margin-right:5px;
+	margin-left:5px;
+}

@@ -1,0 +1,40 @@
+<div class="main-content">
+	<div class="col-sm-6 col-md-2 col-lg-2">
+        <aside>
+			<div class="panel panel-default">
+				<div class="panel-heading">{{'GROCERYLISTHEADER' | translate }}</div>
+				<div class="panel-body gradientFade">
+					<ul class="list-group"  ng-repeat="item in groceryList">
+						<li class="list-group-item index-item">{{item.name}}</li>
+					</ul>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<form name="itemForm" role="form" novalidate>
+						<fieldset>
+							<legend>{{'ITEMFORMLEGEND' | translate }}</legend>
+							<div class="form-group" data-ng-class="{ 'has-error': itemForm.item.$invalid &&  itemForm.item.$dirty}">
+								<label for="item">{{'ITEM' | translate }}</label>
+								<input type="text" class="form-control" id="item" name="item" placeholder="{{'ITEM' | translate }}" data-ng-model="grocery.item" data-ng-minlength="3" required />
+								<div data-ng-messages="itemForm.item.$error" data-ng-show="itemForm.item.$invalid && itemForm.item.$dirty" role="alert" class="bg-danger">
+									<div data-ng-message="required" class="text-muted"><small>{{'ERRORREQUIRE' | translate }}</small></div>
+									<div data-ng-message="minlength" class="text-muted"><small>{{'ERRORMINLENGTH' | translate }}</small></div>
+								</div>
+							</div>
+							<div class="form-actions">
+								<button type="submit" title="{{'ITEMFORMLEGEND' | translate }}" class="btn btn-default btn-lg btn-block" data-ng-click="submit(grocery)" data-ng-disabled="!itemForm.$valid"><span>{{'SUBMIT' | translate }}</span></button>
+								<div data-ng-show="progress.active()"></div>
+							</div>
+						</fieldset>
+					</form>
+				</div>
+			</div>
+		</aside>
+    </div>
+    <div class="col-sm-6 col-md-10 col-lg-10">
+        <article>
+			<p class="lead">My favorite animal will have to be the owl we have some similarities and just like all the characteristic it has.</p><p>The owl is known as a bird of prey because it hunts and feeds on other animals. I definitely like the binocular vision, which is a big advantage to use against their prey. One similarity will have to be that the owl is known to be more active after dusk as I am also more active after dusk. I can go on with more wonderful facts and insights about owls, but I just wanted to share a little about my favorite animal.</p>
+		</article>
+    </div>
+</div>
